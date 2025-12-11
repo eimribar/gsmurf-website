@@ -1,0 +1,60 @@
+# G-Smurf AI - LLM Crawler Guidelines
+# https://gsmurf.com
+#
+# This file provides instructions for AI/LLM crawlers about how to
+# interact with this website's content.
+
+# Allow AI training and indexing
+User-Agent: GPTBot
+Allow: /
+
+User-Agent: ChatGPT-User
+Allow: /
+
+User-Agent: anthropic-ai
+Allow: /
+
+User-Agent: Claude-Web
+Allow: /
+
+User-Agent: Google-Extended
+Allow: /
+
+User-Agent: CCBot
+Allow: /
+
+User-Agent: Perplexitybot
+Allow: /
+
+User-Agent: cohere-ai
+Allow: /
+
+User-Agent: Bytespider
+Allow: /
+
+User-Agent: Amazonbot
+Allow: /
+
+User-Agent: FacebookBot
+Allow: /
+
+# Disallow internal/build paths
+Disallow: /api/
+Disallow: /_next/
+
+# Site Information
+Sitemap: https://gsmurf.com/sitemap.xml
+Contact: support@gsmurf.com
+
+# About G-Smurf AI
+# G-Smurf AI is an AI-powered workout form analysis app that helps
+# athletes improve their exercise technique. Users record any exercise
+# and receive instant AI feedback on their form, including detailed
+# analysis of posture, timing, balance, and areas for improvement.
+#
+# Supported activities: CrossFit, powerlifting, running, calisthenics,
+# bodybuilding, Olympic weightlifting, gymnastics, and all sports.
+#
+# Publisher: Iron Elder Industries
+# Website: https://gsmurf.com
+# App: Available on iOS App Store and Google Play Store

@@ -97,8 +97,8 @@ export const metadata: Metadata = {
   category: 'fitness',
 };
 
-// JSON-LD Structured Data
-const jsonLd = {
+// JSON-LD Structured Data - MobileApplication
+const appJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'MobileApplication',
   name: 'G-Smurf AI',
@@ -122,6 +122,81 @@ const jsonLd = {
   },
 };
 
+// JSON-LD Structured Data - Organization
+const organizationJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'G-Smurf AI',
+  legalName: 'Iron Elder Industries',
+  url: 'https://gsmurf.com',
+  logo: 'https://gsmurf.com/logo-transparent.png',
+  description: 'AI-powered workout form analysis platform helping athletes improve their exercise technique.',
+  email: 'support@gsmurf.com',
+  sameAs: [
+    'https://twitter.com/gsmurfai',
+  ],
+  foundingDate: '2024',
+  founders: [
+    {
+      '@type': 'Person',
+      name: 'Iron Elder Industries',
+    },
+  ],
+};
+
+// JSON-LD Structured Data - WebSite
+const websiteJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'G-Smurf AI',
+  url: 'https://gsmurf.com',
+  description: 'AI-powered workout form analysis - Record any exercise, get instant AI feedback on your technique.',
+  publisher: {
+    '@type': 'Organization',
+    name: 'Iron Elder Industries',
+  },
+};
+
+// JSON-LD Structured Data - FAQPage
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What sports and exercises does G-Smurf AI support?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'G-Smurf AI supports all sports and exercises including CrossFit, powerlifting, running, calisthenics, bodybuilding, Olympic weightlifting, gymnastics, and more. Record any movement and get instant AI feedback.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How does the AI workout analysis work?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Simply record your exercise using the app. Our AI analyzes your form in seconds, providing detailed feedback on posture, timing, balance, and technique. You will receive specific recommendations for improvement.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is G-Smurf AI free to use?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'G-Smurf AI offers free analysis credits to get started. Additional features and unlimited analyses are available through subscription plans on iOS App Store and Google Play Store.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is the AI analysis accurate?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'G-Smurf AI uses advanced multimodal AI technology to analyze movement patterns. While it provides valuable feedback, it is designed to supplement, not replace, professional coaching. Always consult with qualified trainers for personalized guidance.',
+      },
+    },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -136,7 +211,19 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(appJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
         />
         {/* Google Tag Manager */}
         <Script id="google-tag-manager" strategy="afterInteractive">

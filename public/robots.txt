@@ -2,15 +2,41 @@
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://gsmurf.com/sitemap.xml
+# AI Crawlers - Explicitly Allowed
+User-agent: GPTBot
+Allow: /
 
-# Disallow admin and API routes
-Disallow: /api/
-Disallow: /_next/
-Disallow: /static/
+User-agent: ChatGPT-User
+Allow: /
 
-# Allow all crawlers
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Perplexitybot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+# Search Engine Crawlers
 User-agent: Googlebot
 Allow: /
 
@@ -19,3 +45,10 @@ Allow: /
 
 User-agent: Applebot
 Allow: /
+
+# Disallow admin and API routes
+Disallow: /api/
+Disallow: /_next/
+
+# Sitemap
+Sitemap: https://gsmurf.com/sitemap.xml

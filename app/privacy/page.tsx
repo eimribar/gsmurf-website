@@ -1,3 +1,13 @@
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Privacy Policy',
+  description: 'Learn how G-Smurf AI collects, uses, and protects your workout video data. Our privacy policy covers data processing, storage, and your rights.',
+  alternates: {
+    canonical: 'https://gsmurf.com/privacy',
+  },
+};
+
 export default function PrivacyPolicy() {
   return (
     <div className="min-h-screen bg-[#050505] text-white">

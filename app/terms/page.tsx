@@ -1,3 +1,13 @@
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Terms of Service',
+  description: 'Read G-Smurf AI Terms of Service including usage policies, medical disclaimers, subscription terms, and liability limitations.',
+  alternates: {
+    canonical: 'https://gsmurf.com/terms',
+  },
+};
+
 export default function TermsOfService() {
   return (
     <div className="min-h-screen bg-[#050505] text-white">
