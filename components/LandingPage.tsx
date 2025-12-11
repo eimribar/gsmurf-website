@@ -1119,7 +1119,7 @@ export const LandingPage: React.FC = () => {
          <div className="flex justify-center gap-8 text-sm text-zinc-500 mb-8 font-medium">
              <a href="/privacy" className="hover:text-white">Privacy Policy</a>
              <a href="/terms" className="hover:text-white">Terms & Conditions</a>
-             <a href="mailto:support@gsmurf.com" className="hover:text-white">Support</a>
+             <a href="/support" className="hover:text-white">Support</a>
          </div>
          <p className="text-zinc-700 text-xs">© 2024 Iron Elder Industries. All rights reserved.</p>
       </footer>
