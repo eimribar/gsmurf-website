@@ -816,27 +816,27 @@ export const LandingPage: React.FC = () => {
 
         <div className="relative z-10">
           {/* Header */}
-          <div className="text-center mb-16 px-6">
+          <div className="text-center mb-8 md:mb-16 px-4 md:px-6">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-zinc-400 text-xs font-bold uppercase tracking-widest mb-6">
                   <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                   Real Results
               </div>
-              <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight mb-4">
+              <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight mb-3 md:mb-4">
                   ATHLETES <span className="text-zinc-500">TRUST</span> G-SMURF
               </h2>
-              <p className="text-zinc-500 text-lg max-w-2xl mx-auto">
+              <p className="text-zinc-500 text-base md:text-lg max-w-2xl mx-auto">
                   From beginners fixing their first squat to competitive lifters chasing PRs.
               </p>
           </div>
 
           {/* Testimonials Carousel - Row 1 (scrolls left) */}
-          <div className="relative mb-4">
+          <div className="relative mb-4 overflow-hidden">
               {/* Gradient masks */}
-              <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#020202] to-transparent z-10 pointer-events-none" />
-              <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#020202] to-transparent z-10 pointer-events-none" />
+              <div className="absolute left-0 top-0 bottom-0 w-12 md:w-32 bg-gradient-to-r from-[#020202] to-transparent z-10 pointer-events-none" />
+              <div className="absolute right-0 top-0 bottom-0 w-12 md:w-32 bg-gradient-to-l from-[#020202] to-transparent z-10 pointer-events-none" />
 
-              <div className="flex animate-scroll-left hover:[animation-play-state:paused]">
-                  {/* Testimonial Cards - Row 1 */}
+              {/* Desktop: auto-scroll animation */}
+              <div className="hidden md:flex animate-scroll-left hover:[animation-play-state:paused]">
                   {[...Array(2)].map((_, setIndex) => (
                       <div key={setIndex} className="flex gap-4 pr-4">
                           {/* Card 1 */}
@@ -907,16 +907,84 @@ export const LandingPage: React.FC = () => {
                       </div>
                   ))}
               </div>
+
+              {/* Mobile: native swipe scroll */}
+              <div className="flex md:hidden overflow-x-auto scrollbar-hide snap-x snap-mandatory pl-4">
+                  {/* Card 1 */}
+                  <div className="w-[280px] flex-shrink-0 bg-zinc-900/80 rounded-2xl border border-white/5 p-6 snap-start mr-3">
+                      <p className="text-zinc-300 text-sm leading-relaxed mb-4">
+                          &ldquo;I&apos;ve been lifting for 8 years and thought I had my squat dialed in. G-Smurf showed me I was shifting forward at the bottom. <span className="text-brand-400">Fixed it in one session.</span>&rdquo;
+                      </p>
+                      <div className="flex items-center gap-3">
+                          <img src="/testimonials/marcus.png" alt="Marcus Rodriguez" className="w-10 h-10 rounded-full object-cover" />
+                          <div>
+                              <div className="text-white font-semibold text-sm">Marcus Rodriguez</div>
+                              <div className="text-zinc-500 text-xs">Powerlifter • 545lb Squat</div>
+                          </div>
+                      </div>
+                  </div>
+                  {/* Card 2 */}
+                  <div className="w-[280px] flex-shrink-0 bg-zinc-900/80 rounded-2xl border border-white/5 p-6 snap-start mr-3">
+                      <p className="text-zinc-300 text-sm leading-relaxed mb-4">
+                          &ldquo;As a coach, I use this with all my clients now. The visual feedback helps them understand what I&apos;m saying way faster than me just explaining it.&rdquo;
+                      </p>
+                      <div className="flex items-center gap-3">
+                          <img src="/testimonials/sarah.png" alt="Sarah Kim" className="w-10 h-10 rounded-full object-cover" />
+                          <div>
+                              <div className="text-white font-semibold text-sm">Sarah Kim</div>
+                              <div className="text-zinc-500 text-xs">CSCS, Strength Coach</div>
+                          </div>
+                      </div>
+                  </div>
+                  {/* Card 3 */}
+                  <div className="w-[280px] flex-shrink-0 bg-zinc-900/80 rounded-2xl border border-white/5 p-6 snap-start mr-3">
+                      <p className="text-zinc-300 text-sm leading-relaxed mb-4">
+                          &ldquo;The G-Score is addicting. I find myself trying to beat my previous form score every workout. It&apos;s like having a game inside my gym sessions.&rdquo;
+                      </p>
+                      <div className="flex items-center gap-3">
+                          <img src="/testimonials/jake.png" alt="Jake Thompson" className="w-10 h-10 rounded-full object-cover" />
+                          <div>
+                              <div className="text-white font-semibold text-sm">Jake Thompson</div>
+                              <div className="text-zinc-500 text-xs">CrossFit Athlete</div>
+                          </div>
+                      </div>
+                  </div>
+                  {/* Card 4 */}
+                  <div className="w-[280px] flex-shrink-0 bg-zinc-900/80 rounded-2xl border border-white/5 p-6 snap-start mr-3">
+                      <p className="text-zinc-300 text-sm leading-relaxed mb-4">
+                          &ldquo;Coming back from a herniated disc, I was terrified of deadlifting. G-Smurf gave me the confidence to know my form was safe. Can&apos;t put a price on that.&rdquo;
+                      </p>
+                      <div className="flex items-center gap-3">
+                          <img src="/testimonials/alex.png" alt="Alex Liu" className="w-10 h-10 rounded-full object-cover" />
+                          <div>
+                              <div className="text-white font-semibold text-sm">Alex Liu</div>
+                              <div className="text-zinc-500 text-xs">2 Years Pain-Free</div>
+                          </div>
+                      </div>
+                  </div>
+                  {/* Card 5 */}
+                  <div className="w-[280px] flex-shrink-0 bg-zinc-900/80 rounded-2xl border border-white/5 p-6 snap-start mr-4">
+                      <p className="text-zinc-300 text-sm leading-relaxed mb-4">
+                          &ldquo;I didn&apos;t even know this worked for running form. Helped me fix my heel strike. My shin splints are finally gone after months of pain.&rdquo;
+                      </p>
+                      <div className="flex items-center gap-3">
+                          <img src="/testimonials/diana.png" alt="Diana Patel" className="w-10 h-10 rounded-full object-cover" />
+                          <div>
+                              <div className="text-white font-semibold text-sm">Diana Patel</div>
+                              <div className="text-zinc-500 text-xs">Marathon Runner</div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
           </div>
 
-          {/* Testimonials Carousel - Row 2 (scrolls right) */}
-          <div className="relative">
+          {/* Testimonials Carousel - Row 2 (scrolls right) - Desktop only */}
+          <div className="relative hidden md:block overflow-hidden">
               {/* Gradient masks */}
               <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#020202] to-transparent z-10 pointer-events-none" />
               <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#020202] to-transparent z-10 pointer-events-none" />
 
               <div className="flex animate-scroll-right hover:[animation-play-state:paused]">
-                  {/* Testimonial Cards - Row 2 */}
                   {[...Array(2)].map((_, setIndex) => (
                       <div key={setIndex} className="flex gap-4 pr-4">
                           {/* Card 6 */}
